@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form action = '/add_course'>
+  Name of Class to Add: <br>
+  <input type = "text"> <br> <input type = "submit>"
+</form>
+
+  <ul>
+    {% block courses %}
+
+      {% for course in courses %}
+
+      <li> Course </li>
+      {{course[0]}}: {{class[1]}}
+
+      {% endfor %}
+
+    {% endblock %}
+    
+  </ul>
+
+{% endblock %}

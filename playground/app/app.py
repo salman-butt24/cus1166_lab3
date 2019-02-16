@@ -18,6 +18,9 @@ def add_course():
     return render_template("index.html")
 
 
-@app.route("/register_student", methods = ['GET, 'POST'])
+@app.route("/register_student/<int:course_id>", methods = ['GET, 'POST'])
 def register_student():
-    return render_template(" ")
+    return render_template("course_details.html")
+
+if __name__ == "__main__":
+    app.run()
